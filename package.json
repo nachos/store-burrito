@@ -36,7 +36,8 @@
     "wiredep": "^3.0.0-beta"
   },
   "dependencies": {
-    "nachos-server-api": "file:C:\\Users\\Elad\\AppData\\Local\\Temp\\npm-16596-33884b27\\git-cache-d0efaf515983\\7e227d69a6847eca44387c0939b1c1ace068cbfd"
+    "nachos-packages": "^1.2.0",
+    "nachos-server-api": "^1.0.1"
   },
   "private": true
 }

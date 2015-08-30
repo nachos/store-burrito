@@ -1,1 +1,13 @@
-<div ui-view></div>
+<div flex layout="row">
+  <md-sidenav md-is-locked-open="true">
+    <md-toolbar class="md-accent md-tall" layout="column" layout-align="end">
+      <div class="md-toolbar-tools">
+        <span>User user</span>
+      </div>
+    </md-toolbar>
+    <md-button ui-sref="shell.main" aria-label="main">
+      <span>Main</span>
+    </md-button>
+  </md-sidenav>
+  <div ui-view flex layout="column"></div>
+</div>

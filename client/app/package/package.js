@@ -4,8 +4,7 @@ angular.module('nachosStoreApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('shell.package', {
-        url: '/package',
-        params: {item: null},
+        url: '/package/:name',
         controller: 'Package',
         templateUrl: 'app/package/package.html'
       });

@@ -119,14 +119,14 @@ gulp.task('inject:js', function () {
 
 gulp.task('watch', function () {
     gulp.watch('client/{app,components}/**/*.less', ['less']);
-    gulp.watch('client/{app,components}/**/*.css', ['inject:css']);
+    gulp.watch('client/.tmp/**/*.css', ['inject:css']);
     gulp.watch(['client/{app,components}/**/*.js',
         '!client/{app,components}/**/*.spec.js',
         '!client/{app,components}/**/*.mock.js'
     ], ['inject:js']);
 
     gulp.watch([
-            '{.tmp,client}/{app,components}/**/*.css',
+            'client/.tmp/**/*.css',
             'client/{app,components}/**/*.html',
             'client/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg}',
             'client/{app,components}/**/*.js',

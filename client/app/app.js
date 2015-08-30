@@ -7,5 +7,5 @@ angular.module('nachosStoreApp', ['ngMaterial', 'ui.router'])
 
     $mdThemingProvider.theme('default')
       .primaryPalette('blue')
-      .accentPalette('orange');
+      .accentPalette('teal');
   });
