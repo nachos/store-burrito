@@ -1,20 +1,18 @@
 /** Regular npm dependendencies */
 var gulp = require('gulp');
 var childProcess = require('child_process');
-var spawn = childProcess.spawn;
 var exec = childProcess.exec;
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
 var del = require('del');
 var stylish = require('jshint-stylish');
+var nachosOpen = require('nachos-open');
 
 /** Gulp dependencies */
-var gutil = require('gulp-util');
 var inject = require('gulp-inject');
 var less = require('gulp-less');
 var jshint = require('gulp-jshint');
 var livereload = require('gulp-livereload');
-var runElectron = require("gulp-run-electron");
 
 /** Grab-bag of build configuration. */
 var config = {};
@@ -42,7 +40,7 @@ gulp.task('serve', function (cb) {
         'inject:js',
         'wiredep',
         'livereload',
-        ['electron',
+        ['open',
             'watch'],
         cb);
 });
@@ -154,7 +152,10 @@ gulp.task('clean:dist', function (cb) {
     del(['dist'], cb);
 });
 
-gulp.task('electron', function () {
-    return gulp.src('.')
-      .pipe(runElectron());
+gulp.task('open', function (cb) {
+    return nachosOpen('burrito', ['store'])
+      .then(function () {
+        cb();
+        process.exit(1);
+      });
 });

@@ -4,7 +4,7 @@
   "type": "burrito",
   "main": "client\\index.html",
   "burrito": {
-    "theme": "amber"
+    "theme": "blue"
   },
   "private": true
 }

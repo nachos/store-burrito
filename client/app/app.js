@@ -6,6 +6,6 @@ angular.module('nachosStoreApp', ['ngMaterial', 'ui.router'])
       .otherwise('/');
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('amber')
+      .primaryPalette('blue')
       .accentPalette('orange');
   });
